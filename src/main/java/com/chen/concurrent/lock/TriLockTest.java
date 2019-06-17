@@ -20,14 +20,13 @@ public class TriLockTest {
                     try {
                         sleepSeconds(1);
                         System.out.println(Thread.currentThread().getName());
-                        sleepSeconds(1);
                     } finally {
                         lock.unlock();
                     }
                 }
             }
         }
-        // 启动10个线程
+        // 启动20个线程
         for (int i = 0; i < 20; i++) {
             Worker w = new Worker();
             w.setDaemon(true);
