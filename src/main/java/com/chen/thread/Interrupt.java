@@ -22,8 +22,8 @@ public class Interrupt {
         System.out.println(t1.isInterrupted());
         System.out.println(t1.getState());
         Thread.sleep(1000L);
-        System.out.println(t1.getState());
         System.out.println(t1.isInterrupted());
+        System.out.println(t1.getState());
 
     }
 
