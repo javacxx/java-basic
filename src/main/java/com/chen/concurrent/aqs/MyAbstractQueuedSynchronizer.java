@@ -1,4 +1,4 @@
-package com.chen.concurrent.lock;
+package com.chen.concurrent.aqs;
 
 import sun.misc.Unsafe;
 
