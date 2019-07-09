@@ -1,4 +1,4 @@
-package com.chen.concurrent.monitor;
+package com.chen.concurrent.condition;
 
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;

@@ -1,4 +1,4 @@
-package com.chen.concurrent.locks;
+package com.chen.concurrent.lock;
 
 /**
  * 可独占synchronizer

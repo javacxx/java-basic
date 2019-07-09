@@ -1,4 +1,4 @@
-package com.chen.concurrent.monitor;
+package com.chen.concurrent.condition;
 
 import javax.xml.ws.Response;
 import java.util.concurrent.TimeUnit;
@@ -50,7 +50,7 @@ public class DubboInvoker {
         try {
             response = res;
             if (done != null) {
-                done.signal();
+                done.signalAll();
             }
         } finally {
             lock.unlock();
