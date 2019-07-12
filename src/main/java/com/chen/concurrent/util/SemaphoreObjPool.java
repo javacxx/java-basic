@@ -1,4 +1,4 @@
-package com.chen.concurrent.semaphore;
+package com.chen.concurrent.util;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -11,11 +11,11 @@ import java.util.function.Function;
  * @author CXX
  * @date 2019/7/9 11:43
  */
-public class ObjPool<T, R> {
+public class SemaphoreObjPool<T, R> {
    private final List<T> pool;
    private final Semaphore sem;
 
-   public ObjPool(int size, T t) {
+   public SemaphoreObjPool(int size, T t) {
        pool = Collections.synchronizedList(new ArrayList<>(size));
        for (int i = 0; i < size; i++) {
            pool.add(t);
@@ -36,7 +36,7 @@ public class ObjPool<T, R> {
     }
 
     public static void main(String[] args) throws InterruptedException{
-        ObjPool<Long, String> pool = new ObjPool(3, 2L);
+        SemaphoreObjPool<Long, String> pool = new SemaphoreObjPool(3, 2L);
 
         // 多线程进入临界区 exec方法
         pool.exec(
