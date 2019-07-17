@@ -12,10 +12,8 @@ import java.util.concurrent.CyclicBarrier;
 public class CyclicBarrierSolver {
     final int N;
     final CyclicBarrier barrier;
-
     public CyclicBarrierSolver(int taskThreads) {
         N = taskThreads;
-
         Runnable barrierAction = new Runnable() {
             @Override
             public void run() {
@@ -41,7 +39,7 @@ public class CyclicBarrierSolver {
 
         @Override
         public void run() {
-            System.out.println("my row task done :" + myRow);
+            System.out.println("my task done :" + myRow);
             try {
                 barrier.await(); // means my task has done,wait for others task done
             } catch (InterruptedException e) {
