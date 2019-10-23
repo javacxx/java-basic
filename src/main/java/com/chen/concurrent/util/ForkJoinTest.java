@@ -5,6 +5,8 @@ import java.util.concurrent.RecursiveTask;
 
 /**
  * 斐波那契数列，下标从0开始，求第n个下标的斐波那契值
+ * F0 = 0, F1 = 1,
+ * n>=2 : Fn = F(n-1) + F(n-2)
  * @author CXX
  * @date 2019/7/29 10:34
  */
